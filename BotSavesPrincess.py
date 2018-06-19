@@ -2,12 +2,11 @@
 
 def displayPathtoPrincess(n,grid):
 #print all the moves here
-    print(grid)
     for i, j in enumerate(grid): 
         if 'p' in j:
-            princess = (i, j.index('p'))
+            princess = (j.index('p'), i)
         if 'm' in j:
-            mario = (i, j.index('m'))
+            mario = (j.index('m'), i)
     distance = (princess[0] - mario[0], princess[1] - mario[1])
     if distance[0] < 0:
         print('LEFT\n' * abs(distance[0]), end ='')
